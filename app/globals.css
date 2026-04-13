@@ -177,17 +177,26 @@ body {
 .clippy-crane {
   clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
 }
-
+.clippy-building3 {
+  clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
+}
 
 /* 1. Movimiento horizontal */
 @keyframes move-horizontal {
-  0% { transform: translateX(0px); }
-  50% { transform: translateX(-120px); }
-  100% { transform: translateX(0px); }
+  0% { transform: translateX(40px); }
+  50% { transform: translateX(-60px); }
+  100% { transform: translateX(40px); }
+}
+@media (min-width: 768px) {
+@keyframes move-horizontal {
+  0% { transform: translateX(54px); }
+  50% { transform: translateX(-110px); }
+  100% { transform: translateX(54px); }
+}
 }
 
 .move-horizontal {
-  animation: move-horizontal 20s ease-in-out infinite;
+  animation: move-horizontal 30s ease-in-out infinite;
 }
 
 /* 2. Cable sube y baja */
@@ -197,7 +206,7 @@ body {
 } 
 
  .cable-length {
-  animation: cable-length 20s ease-in-out infinite;
+  animation: cable-length 30s ease-in-out infinite;
 }
 
 /* 3. Ajuste de carga para que siga el cable */
@@ -217,5 +226,5 @@ body {
 
 .pendulum {
   transform-origin: top center;
-  animation: pendulum 20s ease-in-out infinite;
+  animation: pendulum 30s ease-in-out infinite;
 }
